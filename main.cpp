@@ -42,10 +42,14 @@ int main() {
             personList.printByName();
         }
         else if (selection == 5){
-            cout << personList.isInList("Mert")<<endl;
+            cout << "Enter a file name to save:" << endl;
+            cin >> filename;
+            personList.saveToFileByAge(filename);
         }
         else if (selection == 6){
-
+            cout << "Enter a file name to save:" << endl;
+            cin >> filename;
+            personList.saveToFileByName(filename);
         }
         else{
             break;

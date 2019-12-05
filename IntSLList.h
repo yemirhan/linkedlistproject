@@ -39,6 +39,8 @@ public:
     bool isInList(string) const;
     void printByAge() const;
     void printByName() const;
+    void saveToFileByAge(string);
+    void saveToFileByName(string);
 private:
     PersonNode *headage, *tailage;
     PersonNode *headname, *tailname;

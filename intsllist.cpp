@@ -1,6 +1,7 @@
 //************************  intSLList.cpp  **************************
 
 #include <iostream>
+#include <fstream>
 #include "IntSLList.h"
 
 using namespace std;
@@ -71,4 +72,20 @@ void IntSLList::printByName() const {
         cout << tmp->name << " " << tmp->age << endl;
     cout << endl;
 }
+void IntSLList::saveToFileByName(string filename) {
+    ofstream MyFile(filename);
+    for (PersonNode *tmp = headname; tmp != 0; tmp = tmp->nextname){
+        MyFile << tmp->name << " " << tmp->age << endl;
+        MyFile << endl;
+    }
+    MyFile.close();
+}
 
+void IntSLList::saveToFileByAge(string filename) {
+    ofstream MyFile(filename);
+    for (PersonNode *tmp = headage; tmp != 0; tmp = tmp->nextage){
+        MyFile << tmp->name << " " << tmp->age << endl;
+        MyFile << endl;
+    }
+    MyFile.close();
+}
