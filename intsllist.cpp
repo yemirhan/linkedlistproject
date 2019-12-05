@@ -96,10 +96,11 @@ void IntSLList::loadFile(string filename) const {
     ifstream ReadFile(filename);
     while (getline(ReadFile, line)){
         if(line != ""){
-            for (i = 0; i < line.size(); ++i);
+            i = line.find(" ");
             name = line.substr(0, i);
             age = stoi(line.substr(i, line.size()-i));
             cout << name << " " << age << endl;
+            cout << i << endl;
         }
     }
 }
