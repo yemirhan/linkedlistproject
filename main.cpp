@@ -42,7 +42,7 @@ int main() {
             personList.printByName();
         }
         else if (selection == 5){
-            cout << personList.isInList("Murat")<<endl;
+            cout << personList.isInList("Mert")<<endl;
         }
         else if (selection == 6){
 
