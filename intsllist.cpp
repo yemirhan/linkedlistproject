@@ -72,7 +72,7 @@ void IntSLList::printByName() const {
         cout << tmp->name << " " << tmp->age << endl;
     cout << endl;
 }
-void IntSLList::saveToFileByName(string filename) {
+void IntSLList::saveToFileByName(string filename) const{
     ofstream MyFile(filename);
     for (PersonNode *tmp = headname; tmp != 0; tmp = tmp->nextname){
         MyFile << tmp->name << " " << tmp->age << endl;
@@ -81,7 +81,7 @@ void IntSLList::saveToFileByName(string filename) {
     MyFile.close();
 }
 
-void IntSLList::saveToFileByAge(string filename) {
+void IntSLList::saveToFileByAge(string filename) const {
     ofstream MyFile(filename);
     for (PersonNode *tmp = headage; tmp != 0; tmp = tmp->nextage){
         MyFile << tmp->name << " " << tmp->age << endl;
