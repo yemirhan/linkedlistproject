@@ -41,6 +41,7 @@ public:
     void printByName() const;
     void saveToFileByAge(string) const;
     void saveToFileByName(string) const;
+    void loadFile(string) const;
 private:
     PersonNode *headage, *tailage;
     PersonNode *headname, *tailname;

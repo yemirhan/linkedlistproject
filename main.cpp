@@ -21,6 +21,7 @@ int main() {
         cout << "2) Remove a person" << endl;
         cout << "3) Print people by age" << endl;
         cout << "4) Print people by name" << endl;
+        cout << "7) Load people from file" << endl;
         cout << "5) Save people to a file by age" << endl;
         cout << "6) Save people to a file by name" << endl;
         cout << "7) Exit" << endl;
@@ -50,6 +51,11 @@ int main() {
             cout << "Enter a file name to save:" << endl;
             cin >> filename;
             personList.saveToFileByName(filename);
+        }
+        else if (selection == 7){
+            cout << "Enter a file name to load:" << endl;
+            cin >> filename;
+            personList.loadFile(filename);
         }
         else{
             break;

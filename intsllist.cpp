@@ -16,7 +16,7 @@ IntSLList::~IntSLList() {
         headage = p;
     }
 }
-void IntSLList::add(string el, int el2) {
+void IntSLList::add(string el, int el2)  {
     if (tailname || tailage != 0) {      // if list not empty;
         tailname->nextname = new PersonNode(el, el2);
         tailage->nextage = new PersonNode(el, el2);
@@ -88,4 +88,18 @@ void IntSLList::saveToFileByAge(string filename) const {
         MyFile << endl;
     }
     MyFile.close();
+}
+void IntSLList::loadFile(string filename) const {
+    string line;
+    string name;
+    int age,i;
+    ifstream ReadFile(filename);
+    while (getline(ReadFile, line)){
+        if(line != ""){
+            for (i = 0; i < line.size(); ++i);
+            name = line.substr(0, i);
+            age = stoi(line.substr(i, line.size()-i));
+            cout << name << " " << age << endl;
+        }
+    }
 }
