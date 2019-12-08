@@ -14,8 +14,6 @@ int main() {
     //cout << "Enter file name to load from" << endl;
     //cin >> filename;
     //loadfile(filename);
-    personList.add("Metin", 22);
-    personList.add("Elif", 20);
     while(true){
         cout << "1) Add a person" << endl;
         cout << "2) Remove a person" << endl;

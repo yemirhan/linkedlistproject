@@ -16,21 +16,69 @@ IntSLList::~IntSLList() {
         headage = p;
     }
 }
-void IntSLList::add(string el, int el2)  {
-    if (tailname || tailage != 0) {      // if list not empty;
-        tailname->nextname = new PersonNode(el, el2);
-        tailage->nextage = new PersonNode(el, el2);
-        tailname = tailname->nextname;
-        tailage = tailage -> nextage;
+
+void IntSLList::add(string el, int el2)
+{
+    PersonNode * temp = new PersonNode(el,el2);
+    temp->nextname = 0;
+    temp->nextage = 0;
+    if (headage && headname == 0)
+    {
+        headage = temp;
+        headname = temp;
     }
-    else {
-        headage = tailage = new PersonNode(el,el2);
-        headname = tailname = new PersonNode(el,el2);
+    else
+    {
+        PersonNode * theadname = headname;
+        PersonNode * theadage = headage;
+        PersonNode * previous = 0;
+        //Append for age
+        while (theadage != 0 && el2 > theadage->age)
+        {
+            previous = theadage;
+            theadage = theadage->nextage;
+        }
+        if (previous == 0)
+        {
+            headage = temp;
+            temp->nextage = theadage;
+        }
+        else if (theadage == 0)
+        {
+            previous->nextage = temp;
+        }
+        else
+        {
+            previous->nextage = temp;
+            temp->nextage = theadage;
+        }
+        //Append for name
+        previous= 0;
+        while (theadname != 0 && el > theadname->name)
+        {
+            previous = theadname;
+            theadname = theadname->nextname;
+        }
+        if (previous == 0)
+        {
+            headname = temp;
+            temp->nextname = theadname;
+        }
+        else if (theadname == 0)
+        {
+            previous->nextname = temp;
+        }
+        else
+        {
+            previous->nextname = temp;
+            temp->nextname = theadname;
+        }
     }
+
 }
 
 void IntSLList::remove(string el) {
-    if (headage || headname != 0)                     // if non-empty list;
+    /*if (headage || headname != 0)                     // if non-empty list;
         if (headname == tailname && el == headname->name) { // if only one
             delete headname,headage;// node on the list;
             headage = tailage = 0;
@@ -42,7 +90,7 @@ void IntSLList::remove(string el) {
             headage = headage->nextage;
             delete tmp,tmp2;// and old head is deleted;
         }
-        /*else {                        // if more than one node in the list
+        else {                        // if more than one node in the list
             PersonNode *pred, *tmp;
             for (pred = head, tmp = head->node; // and a non-head node
                  tmp != 0 && !(tmp->name == el);// is deleted;
@@ -92,6 +140,7 @@ void IntSLList::saveToFileByAge(string filename) const {
 void IntSLList::loadFile(string filename) const {
     string line;
     string name;
+    PersonNode temp;
     int age,i;
     ifstream ReadFile(filename);
     while (getline(ReadFile, line)){
@@ -99,8 +148,7 @@ void IntSLList::loadFile(string filename) const {
             i = line.find(" ");
             name = line.substr(0, i);
             age = stoi(line.substr(i, line.size()-i));
-            cout << name << " " << age << endl;
-            cout << i << endl;
+            //personList.add(name,age);
         }
     }
 }
