@@ -24,13 +24,13 @@ public:
 };
 
 
-class IntSLList {
+class SLList {
 public:
-    IntSLList() {
+    SLList() {
         headage = tailage = 0;
         headname = tailname = 0;
     }
-    ~IntSLList();
+    ~SLList();
     int isEmpty() {
         return headage == 0;
     }

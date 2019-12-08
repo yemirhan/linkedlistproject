@@ -82,13 +82,10 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/Users/emirhan/CLionProjects/proje211/IntSLList.h">
+		<Unit filename="/Users/emirhan/CLionProjects/proje211/SLList.cpp">
 			<Option target="proje211"/>
 		</Unit>
-		<Unit filename="/Users/emirhan/CLionProjects/proje211/intsllist.cpp">
-			<Option target="proje211"/>
-		</Unit>
-		<Unit filename="/Users/emirhan/CLionProjects/proje211/intsllist.h">
+		<Unit filename="/Users/emirhan/CLionProjects/proje211/SLList.h">
 			<Option target="proje211"/>
 		</Unit>
 		<Unit filename="/Users/emirhan/CLionProjects/proje211/main.cpp">

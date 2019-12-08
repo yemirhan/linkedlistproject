@@ -1,12 +1,12 @@
-//************************  intSLList.cpp  **************************
+//************************  SLList.cpp  **************************
 
 #include <iostream>
 #include <fstream>
-#include "IntSLList.h"
+#include "SLList.h"
 
 using namespace std;
 
-IntSLList::~IntSLList() {
+SLList::~SLList() {
     for (PersonNode *p; !isEmpty(); ) {
         p = headname->nextname;
         delete headname;
@@ -17,7 +17,7 @@ IntSLList::~IntSLList() {
     }
 }
 
-void IntSLList::add(string el, int el2)
+void SLList::add(string el, int el2)
 {
     PersonNode * temp = new PersonNode(el,el2);
     temp->nextname = 0;
@@ -46,6 +46,7 @@ void IntSLList::add(string el, int el2)
         else if (theadage == 0)
         {
             previous->nextage = temp;
+            tailage = temp;
         }
         else
         {
@@ -67,6 +68,7 @@ void IntSLList::add(string el, int el2)
         else if (theadname == 0)
         {
             previous->nextname = temp;
+            tailname = temp;
         }
         else
         {
@@ -77,50 +79,76 @@ void IntSLList::add(string el, int el2)
 
 }
 
-void IntSLList::remove(string el) {
-    /*if (headage || headname != 0)                     // if non-empty list;
-        if (headname == tailname && el == headname->name) { // if only one
-            delete headname,headage;// node on the list;
-            headage = tailage = 0;
-            headname = tailname = 0;
-        }
-        else if (el == headname->name) {  // if more than one node on the list
-            PersonNode *tmp = headname, *tmp2 = headage;
-            headname = headname->nextname;
-            headage = headage->nextage;
-            delete tmp,tmp2;// and old head is deleted;
-        }
-        else {                        // if more than one node in the list
-            PersonNode *pred, *tmp;
-            for (pred = head, tmp = head->node; // and a non-head node
-                 tmp != 0 && !(tmp->name == el);// is deleted;
-                 pred = pred->node, tmp = tmp->node);
-            if (tmp != 0) {
-                pred->node = tmp->node;
-                if (tmp == tail)
-                    tail = pred;
-                delete tmp;
-            }
-        }*/
+void SLList::remove(string el) {
+    PersonNode * theadname = headname;
+    PersonNode * theadage = headage;
+    PersonNode * previous = 0;
+    PersonNode * tempnext = 0;
+    int el2;
+    while (theadname->name != el && theadname != 0)
+    {
+        previous = theadname;
+        theadname = theadname->nextname;
+        el2 = theadname->age;
+    }
+    if (theadname == 0)
+    {
+        cout<<"Sorry no data found!!!"<<endl;
+    }
+    else if (previous == 0)
+    {
+        tempnext = theadname->nextname;
+        headname = tempnext;
+        delete theadname;
+    }
+    else
+    {
+        tempnext = theadname->nextname;
+        previous->nextname = tempnext;
+        delete theadname;
+    }
+    previous=0;
+    while (theadage->age != el2 && theadage != 0)
+    {
+        previous = theadage;
+        theadage = theadage->nextage;
+    }
+    if (theadage == 0)
+    {
+        cout<<"Sorry no data found!!!"<<endl;
+    }
+    else if (previous == 0)
+    {
+        tempnext = theadage->nextage;
+        headname = tempnext;
+        delete theadage;
+    }
+    else
+    {
+        tempnext = theadage->nextage;
+        previous->nextage = tempnext;
+        delete theadage;
+    }
+
 }
 
-bool IntSLList::isInList(string el) const {
+bool SLList::isInList(string el) const {
     PersonNode *tmp;
     for (tmp = headname; tmp != 0 && !(tmp->name == el); tmp = tmp->nextname);
     return tmp != 0;
 }
 
-void IntSLList::printByAge() const {
+void SLList::printByAge() const {
     for (PersonNode *tmp = headage; tmp != 0; tmp = tmp->nextage)
         cout << tmp->name << " " << tmp->age << endl;
     cout << endl;
 }
-void IntSLList::printByName() const {
+void SLList::printByName() const {
     for (PersonNode *tmp = headname; tmp != 0; tmp = tmp->nextname)
         cout << tmp->name << " " << tmp->age << endl;
     cout << endl;
 }
-void IntSLList::saveToFileByName(string filename) const{
+void SLList::saveToFileByName(string filename) const{
     ofstream MyFile(filename);
     for (PersonNode *tmp = headname; tmp != 0; tmp = tmp->nextname){
         MyFile << tmp->name << " " << tmp->age << endl;
@@ -129,7 +157,7 @@ void IntSLList::saveToFileByName(string filename) const{
     MyFile.close();
 }
 
-void IntSLList::saveToFileByAge(string filename) const {
+void SLList::saveToFileByAge(string filename) const {
     ofstream MyFile(filename);
     for (PersonNode *tmp = headage; tmp != 0; tmp = tmp->nextage){
         MyFile << tmp->name << " " << tmp->age << endl;
@@ -137,7 +165,7 @@ void IntSLList::saveToFileByAge(string filename) const {
     }
     MyFile.close();
 }
-void IntSLList::loadFile(string filename) const {
+void SLList::loadFile(string filename) const {
     string line;
     string name;
     PersonNode temp;
@@ -148,7 +176,7 @@ void IntSLList::loadFile(string filename) const {
             i = line.find(" ");
             name = line.substr(0, i);
             age = stoi(line.substr(i, line.size()-i));
-            //personList.add(name,age);
+            //temp.add(name,age);
         }
     }
 }

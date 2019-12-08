@@ -123,32 +123,32 @@ proje211/fast:
 	$(MAKE) -f CMakeFiles/proje211.dir/build.make CMakeFiles/proje211.dir/build
 .PHONY : proje211/fast
 
-intsllist.o: intsllist.cpp.o
+SLList.o: SLList.cpp.o
 
-.PHONY : intsllist.o
+.PHONY : SLList.o
 
 # target to build an object file
-intsllist.cpp.o:
-	$(MAKE) -f CMakeFiles/proje211.dir/build.make CMakeFiles/proje211.dir/intsllist.cpp.o
-.PHONY : intsllist.cpp.o
+SLList.cpp.o:
+	$(MAKE) -f CMakeFiles/proje211.dir/build.make CMakeFiles/proje211.dir/SLList.cpp.o
+.PHONY : SLList.cpp.o
 
-intsllist.i: intsllist.cpp.i
+SLList.i: SLList.cpp.i
 
-.PHONY : intsllist.i
+.PHONY : SLList.i
 
 # target to preprocess a source file
-intsllist.cpp.i:
-	$(MAKE) -f CMakeFiles/proje211.dir/build.make CMakeFiles/proje211.dir/intsllist.cpp.i
-.PHONY : intsllist.cpp.i
+SLList.cpp.i:
+	$(MAKE) -f CMakeFiles/proje211.dir/build.make CMakeFiles/proje211.dir/SLList.cpp.i
+.PHONY : SLList.cpp.i
 
-intsllist.s: intsllist.cpp.s
+SLList.s: SLList.cpp.s
 
-.PHONY : intsllist.s
+.PHONY : SLList.s
 
 # target to generate assembly for a file
-intsllist.cpp.s:
-	$(MAKE) -f CMakeFiles/proje211.dir/build.make CMakeFiles/proje211.dir/intsllist.cpp.s
-.PHONY : intsllist.cpp.s
+SLList.cpp.s:
+	$(MAKE) -f CMakeFiles/proje211.dir/build.make CMakeFiles/proje211.dir/SLList.cpp.s
+.PHONY : SLList.cpp.s
 
 main.o: main.cpp.o
 
@@ -186,9 +186,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... proje211"
-	@echo "... intsllist.o"
-	@echo "... intsllist.i"
-	@echo "... intsllist.s"
+	@echo "... SLList.o"
+	@echo "... SLList.i"
+	@echo "... SLList.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

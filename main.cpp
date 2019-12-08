@@ -1,19 +1,13 @@
 #include <iostream>
 using namespace std;
 
-#include "IntSLList.h"
-/*void loadfile(string filename){
-    personList.add()
-}*/
+#include "SLList.h"
 int main() {
     int selection;
     string filename;
     string name;
     int age;
-    IntSLList personList;
-    //cout << "Enter file name to load from" << endl;
-    //cin >> filename;
-    //loadfile(filename);
+    SLList personList;
     while(true){
         cout << "1) Add a person" << endl;
         cout << "2) Remove a person" << endl;
