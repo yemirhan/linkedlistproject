@@ -1,5 +1,5 @@
-//************************  intSLList.h  **************************
-//           singly-linked list class to store integers
+//************************  PersonList.h  **************************
+//           singly-linked list class to store name and ages
 
 #ifndef LINKED_LIST
 #define LINKED_LIST
@@ -24,13 +24,13 @@ public:
 };
 
 
-class SLList {
+class PersonList {
 public:
-    SLList() {
+    PersonList() {
         headage = tailage = 0;
         headname = tailname = 0;
     }
-    ~SLList();
+    ~PersonList();
     int isEmpty() {
         return headage == 0;
     }

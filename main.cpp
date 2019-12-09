@@ -1,13 +1,13 @@
 #include <iostream>
 using namespace std;
 
-#include "SLList.h"
+#include "PersonList.h"
 int main() {
     int selection;
     string filename;
     string name;
     int age;
-    SLList personList;
+    PersonList personList;
     while(true){
         cout << "1) Add a person" << endl;
         cout << "2) Remove a person" << endl;

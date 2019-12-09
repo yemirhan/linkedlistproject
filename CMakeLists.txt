@@ -3,4 +3,4 @@ project(proje211)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(proje211 main.cpp SLList.h SLList.cpp)
+add_executable(proje211 main.cpp PersonList.h PersonList.cpp)
