@@ -1,1 +1,1 @@
-/Library/Developer/CommandLineTools/usr/bin/c++  -g -Wl,-search_paths_first -Wl,-headerpad_max_install_names  CMakeFiles/proje211.dir/main.cpp.o CMakeFiles/proje211.dir/intsllist.cpp.o  -o proje211 
+/Library/Developer/CommandLineTools/usr/bin/c++  -g -Wl,-search_paths_first -Wl,-headerpad_max_install_names  CMakeFiles/proje211.dir/main.cpp.o CMakeFiles/proje211.dir/SLList.cpp.o  -o proje211 

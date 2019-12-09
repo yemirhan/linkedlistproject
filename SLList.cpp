@@ -91,21 +91,17 @@ void SLList::remove(string el) {
         theadname = theadname->nextname;
         el2 = theadname->age;
     }
-    if (theadname == 0)
-    {
-        cout<<"Sorry no data found!!!"<<endl;
-    }
-    else if (previous == 0)
+    if (previous == 0)
     {
         tempnext = theadname->nextname;
         headname = tempnext;
-        delete theadname;
+        //delete theadname;
     }
     else
     {
         tempnext = theadname->nextname;
         previous->nextname = tempnext;
-        delete theadname;
+        //delete theadname;
     }
     previous=0;
     while (theadage->age != el2 && theadage != 0)
@@ -113,22 +109,21 @@ void SLList::remove(string el) {
         previous = theadage;
         theadage = theadage->nextage;
     }
-    if (theadage == 0)
-    {
-        cout<<"Sorry no data found!!!"<<endl;
-    }
-    else if (previous == 0)
+    if (previous == 0)
     {
         tempnext = theadage->nextage;
         headname = tempnext;
-        delete theadage;
+        //delete theadage;
     }
     else
     {
         tempnext = theadage->nextage;
         previous->nextage = tempnext;
-        delete theadage;
+        //delete theadage;
     }
+    delete theadage, theadname;
+}
+void SLList::update(string el, int el2) {
 
 }
 

@@ -36,6 +36,7 @@ public:
     }
     void add(string, int);
     void remove(string);
+    void update(string, int);
     bool isInList(string) const;
     void printByAge() const;
     void printByName() const;
