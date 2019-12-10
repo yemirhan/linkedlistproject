@@ -91,6 +91,14 @@ void PersonList::remove(string el) {
         theadname = theadname->nextname;
         el2 = theadname->age;
     }
+    while (theadage->age != el2 && theadage != 0)
+    {
+        previous = theadage;
+        theadage = theadage->nextage;
+    }
+
+    /*
+     *
     if (previous == 0)
     {
         tempnext = theadname->nextname;
@@ -104,15 +112,11 @@ void PersonList::remove(string el) {
         //delete theadname;
     }
     previous=0;
-    while (theadage->age != el2 && theadage != 0)
-    {
-        previous = theadage;
-        theadage = theadage->nextage;
-    }
+
     if (previous == 0)
     {
         tempnext = theadage->nextage;
-        headname = tempnext;
+        headage = tempnext;
         //delete theadage;
     }
     else
@@ -123,9 +127,11 @@ void PersonList::remove(string el) {
     }
     delete theadage;
     delete theadname;
+     */
 }
 void PersonList::update(string el, int el2) {
-
+    remove(el);
+    add(el,el2);
 }
 
 bool PersonList::isInList(string el) const {
@@ -146,33 +152,26 @@ void PersonList::printByName() const {
 }
 void PersonList::saveToFileByName(string filename) const{
     ofstream MyFile(filename);
-    for (PersonNode *tmp = headname; tmp != 0; tmp = tmp->nextname){
+    for (PersonNode *tmp = headname; tmp != 0; tmp = tmp->nextname)
         MyFile << tmp->name << " " << tmp->age << endl;
-        MyFile << endl;
-    }
     MyFile.close();
 }
 
 void PersonList::saveToFileByAge(string filename) const {
     ofstream MyFile(filename);
-    for (PersonNode *tmp = headage; tmp != 0; tmp = tmp->nextage){
+    for (PersonNode *tmp = headage; tmp != 0; tmp = tmp->nextage)
         MyFile << tmp->name << " " << tmp->age << endl;
-        MyFile << endl;
-    }
     MyFile.close();
 }
-void PersonList::loadFile(string filename) const {
+void PersonList::loadFile(string filename) {
     string line;
     string name;
-    PersonNode temp;
     int age,i;
     ifstream ReadFile(filename);
     while (getline(ReadFile, line)){
-        if(line != ""){
-            i = line.find(" ");
-            name = line.substr(0, i);
-            age = stoi(line.substr(i, line.size()-i));
-            //temp.add(name,age);
-        }
+        i = line.find(" ");
+        name = line.substr(0, i);
+        age = stoi(line.substr(i+1, line.size()-i));
+        add(name,age);
     }
 }
