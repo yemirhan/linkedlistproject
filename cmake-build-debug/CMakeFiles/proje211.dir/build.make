@@ -34,19 +34,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake
+CMAKE_COMMAND = "/cygdrive/c/Users/Yusuf Emirhan/.CLion2019.3/system/cygwin_cmake/bin/cmake.exe"
 
 # The command to remove a file.
-RM = /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E remove -f
+RM = "/cygdrive/c/Users/Yusuf Emirhan/.CLion2019.3/system/cygwin_cmake/bin/cmake.exe" -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/emirhan/CLionProjects/proje211
+CMAKE_SOURCE_DIR = "/cygdrive/c/Users/Yusuf Emirhan/CLionProjects/proje211"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/emirhan/CLionProjects/proje211/cmake-build-debug
+CMAKE_BINARY_DIR = "/cygdrive/c/Users/Yusuf Emirhan/CLionProjects/proje211/cmake-build-debug"
 
 # Include any dependencies generated for this target.
 include CMakeFiles/proje211.dir/depend.make
@@ -59,29 +59,29 @@ include CMakeFiles/proje211.dir/flags.make
 
 CMakeFiles/proje211.dir/main.cpp.o: CMakeFiles/proje211.dir/flags.make
 CMakeFiles/proje211.dir/main.cpp.o: ../main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/emirhan/CLionProjects/proje211/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/proje211.dir/main.cpp.o"
-	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/proje211.dir/main.cpp.o -c /Users/emirhan/CLionProjects/proje211/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/cygdrive/c/Users/Yusuf Emirhan/CLionProjects/proje211/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/proje211.dir/main.cpp.o"
+	/usr/bin/c++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/proje211.dir/main.cpp.o -c "/cygdrive/c/Users/Yusuf Emirhan/CLionProjects/proje211/main.cpp"
 
 CMakeFiles/proje211.dir/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/proje211.dir/main.cpp.i"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/emirhan/CLionProjects/proje211/main.cpp > CMakeFiles/proje211.dir/main.cpp.i
+	/usr/bin/c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/cygdrive/c/Users/Yusuf Emirhan/CLionProjects/proje211/main.cpp" > CMakeFiles/proje211.dir/main.cpp.i
 
 CMakeFiles/proje211.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/proje211.dir/main.cpp.s"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/emirhan/CLionProjects/proje211/main.cpp -o CMakeFiles/proje211.dir/main.cpp.s
+	/usr/bin/c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/cygdrive/c/Users/Yusuf Emirhan/CLionProjects/proje211/main.cpp" -o CMakeFiles/proje211.dir/main.cpp.s
 
 CMakeFiles/proje211.dir/PersonList.cpp.o: CMakeFiles/proje211.dir/flags.make
 CMakeFiles/proje211.dir/PersonList.cpp.o: ../PersonList.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/emirhan/CLionProjects/proje211/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/proje211.dir/PersonList.cpp.o"
-	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/proje211.dir/PersonList.cpp.o -c /Users/emirhan/CLionProjects/proje211/PersonList.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/cygdrive/c/Users/Yusuf Emirhan/CLionProjects/proje211/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/proje211.dir/PersonList.cpp.o"
+	/usr/bin/c++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/proje211.dir/PersonList.cpp.o -c "/cygdrive/c/Users/Yusuf Emirhan/CLionProjects/proje211/PersonList.cpp"
 
 CMakeFiles/proje211.dir/PersonList.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/proje211.dir/PersonList.cpp.i"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/emirhan/CLionProjects/proje211/PersonList.cpp > CMakeFiles/proje211.dir/PersonList.cpp.i
+	/usr/bin/c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/cygdrive/c/Users/Yusuf Emirhan/CLionProjects/proje211/PersonList.cpp" > CMakeFiles/proje211.dir/PersonList.cpp.i
 
 CMakeFiles/proje211.dir/PersonList.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/proje211.dir/PersonList.cpp.s"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/emirhan/CLionProjects/proje211/PersonList.cpp -o CMakeFiles/proje211.dir/PersonList.cpp.s
+	/usr/bin/c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/cygdrive/c/Users/Yusuf Emirhan/CLionProjects/proje211/PersonList.cpp" -o CMakeFiles/proje211.dir/PersonList.cpp.s
 
 # Object files for target proje211
 proje211_OBJECTS = \
@@ -91,15 +91,15 @@ proje211_OBJECTS = \
 # External object files for target proje211
 proje211_EXTERNAL_OBJECTS =
 
-proje211: CMakeFiles/proje211.dir/main.cpp.o
-proje211: CMakeFiles/proje211.dir/PersonList.cpp.o
-proje211: CMakeFiles/proje211.dir/build.make
-proje211: CMakeFiles/proje211.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/emirhan/CLionProjects/proje211/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable proje211"
+proje211.exe: CMakeFiles/proje211.dir/main.cpp.o
+proje211.exe: CMakeFiles/proje211.dir/PersonList.cpp.o
+proje211.exe: CMakeFiles/proje211.dir/build.make
+proje211.exe: CMakeFiles/proje211.dir/link.txt
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="/cygdrive/c/Users/Yusuf Emirhan/CLionProjects/proje211/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable proje211.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/proje211.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
-CMakeFiles/proje211.dir/build: proje211
+CMakeFiles/proje211.dir/build: proje211.exe
 
 .PHONY : CMakeFiles/proje211.dir/build
 
@@ -108,6 +108,6 @@ CMakeFiles/proje211.dir/clean:
 .PHONY : CMakeFiles/proje211.dir/clean
 
 CMakeFiles/proje211.dir/depend:
-	cd /Users/emirhan/CLionProjects/proje211/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/emirhan/CLionProjects/proje211 /Users/emirhan/CLionProjects/proje211 /Users/emirhan/CLionProjects/proje211/cmake-build-debug /Users/emirhan/CLionProjects/proje211/cmake-build-debug /Users/emirhan/CLionProjects/proje211/cmake-build-debug/CMakeFiles/proje211.dir/DependInfo.cmake --color=$(COLOR)
+	cd "/cygdrive/c/Users/Yusuf Emirhan/CLionProjects/proje211/cmake-build-debug" && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" "/cygdrive/c/Users/Yusuf Emirhan/CLionProjects/proje211" "/cygdrive/c/Users/Yusuf Emirhan/CLionProjects/proje211" "/cygdrive/c/Users/Yusuf Emirhan/CLionProjects/proje211/cmake-build-debug" "/cygdrive/c/Users/Yusuf Emirhan/CLionProjects/proje211/cmake-build-debug" "/cygdrive/c/Users/Yusuf Emirhan/CLionProjects/proje211/cmake-build-debug/CMakeFiles/proje211.dir/DependInfo.cmake" --color=$(COLOR)
 .PHONY : CMakeFiles/proje211.dir/depend
 

@@ -91,43 +91,31 @@ void PersonList::remove(string el) {
         theadname = theadname->nextname;
         el2 = theadname->age;
     }
-    while (theadage->age != el2 && theadage != 0)
-    {
-        previous = theadage;
-        theadage = theadage->nextage;
-    }
-
-    /*
-     *
     if (previous == 0)
     {
-        tempnext = theadname->nextname;
-        headname = tempnext;
-        //delete theadname;
+        headname = headname ->nextname;
     }
     else
     {
         tempnext = theadname->nextname;
         previous->nextname = tempnext;
-        //delete theadname;
     }
     previous=0;
-
+    while (theadage->age != el2 && theadage != 0)
+    {
+        previous = theadage;
+        theadage = theadage->nextage;
+    }
+    PersonNode * tempnext2 = 0;
     if (previous == 0)
     {
-        tempnext = theadage->nextage;
-        headage = tempnext;
-        //delete theadage;
+        headage = headage->nextage;
     }
     else
     {
-        tempnext = theadage->nextage;
-        previous->nextage = tempnext;
-        //delete theadage;
+        tempnext2 = theadage->nextage;
+        previous->nextage = tempnext2;
     }
-    delete theadage;
-    delete theadname;
-     */
 }
 void PersonList::update(string el, int el2) {
     remove(el);
@@ -169,9 +157,11 @@ void PersonList::loadFile(string filename) {
     int age,i;
     ifstream ReadFile(filename);
     while (getline(ReadFile, line)){
-        i = line.find(" ");
-        name = line.substr(0, i);
-        age = stoi(line.substr(i+1, line.size()-i));
-        add(name,age);
+        if(line != ""){
+            i = line.find(" ");
+            name = line.substr(0, i);
+            age = stoi(line.substr(i+1, line.size()-i));
+            add(name,age);
+        }
     }
 }

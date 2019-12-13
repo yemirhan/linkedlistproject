@@ -1,7 +1,8 @@
 file(REMOVE_RECURSE
   "CMakeFiles/proje211.dir/PersonList.cpp.o"
   "CMakeFiles/proje211.dir/main.cpp.o"
-  "proje211"
+  "libproje211.dll.a"
+  "proje211.exe"
   "proje211.pdb"
 )
 
